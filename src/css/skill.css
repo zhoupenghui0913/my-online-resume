@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Phelps Chou
+ * @date    2017-02-24 21:34:00
+ * @version $Id$
+ */
+
+
+/*专业技能样式*/
+#skill .skill-info{
+	width: 800px;
+	margin: 0 auto;
+	line-height: 30px;
+	font-size: 13px;
+	margin-top: 40px;
+	margin-bottom: 35px;
+}
+#skill .skill-list>ul>li{
+	float: left;
+	width: 285px;
+	margin-left: 20px;
+	visibility: hidden;
+}
+#skill .skill-list>ul{
+	margin-left: -20px;
+}
+#skill .skill-list>ul>li .skill-list-title{
+	width: 200px;
+	border-radius: 30px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+#skill .skill-list>ul>li .skill-list-title:hover{
+	background-color: #ccc;
+}
+#skill .skill-list>ul>li .skill-list-title i{
+	font-size: 60px;
+}
+#skill .skill-list>ul>li .skill-list-title h3{
+	font-size: 16px;
+	font-weight: normal;
+	padding-bottom: 20px;
+}
+
+#skill .skill-list>ul>li .icon-cshangsanjiao{
+	display: block;
+	margin: 10px auto;
+	transition: all 1s;
+}
+#skill .skill-list>ul>li .icon-cshangsanjiao.flag{
+	transform: rotate(180deg);
+}
+#skill .skill-list>ul>li .skill-list-detail{
+	width: 300px;
+	height: 100px;
+	padding: 10px;
+	padding-right: 30px;
+	line-height: 20px;
+	text-align: left;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: #c8c8dc;
+	overflow-y: scroll;
+}
+#skill .skill-list>ul>li .skill-list-detail li{
+	list-style-type: disc;
+	list-style-position: inside;
+	font-size: 12px;
+	padding-left: 5px;
+}
+#skill .skill-list>ul>li .detail-wrap{
+	display: none;
+	width: 310px;
+	height: 120px;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#skill .content-wrap{
+	height: 515px;
+}
+
+@keyframes skill-scale {
+	0% {
+		opacity: 0.1;
+		transform:scale(0.3);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);	
+	}
+}
+.skill-scale{
+	animation: skill-scale 1s;
+	visibility: visible !important;
+}

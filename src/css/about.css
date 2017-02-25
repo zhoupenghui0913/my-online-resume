@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Phelps Chou
+ * @date    2017-02-24 21:33:05
+ * @version $Id$
+ */
+
+
+/*关于我样式*/
+#about .about-list{
+	background-color: #a0a0b4;
+	width: 700px;
+	height: 150px;
+	padding: 15px 0;
+	border-radius: 30px;
+	margin: 40px auto;
+}
+#about .about-list .list{
+	float: left;
+	width: 25%;
+}
+#about .about-list .list .list-title{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 0 0 0 4px rgba(255,255,255,1);  /* offset-x | offset-y | blur-radius | spread-radius | color */
+	transition: background-color 1s, box-shadow 1s;
+}
+#about .about-list .list .list-title i{
+	display: block;
+	font-size: 52px;
+	line-height: 80px;
+}
+#about .about-list .list:hover .list-title{
+	background-color: rgba(255,255,255,1);
+	cursor: pointer;
+	box-shadow: 0 0 0 8px rgba(255,255,255,0.3);  /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+#about .about-list .list:hover i{
+	animation-name: slide;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;  /*把物体动画地从一个地方移动到另一个地方，并让它停留在那里*/
+}
+@keyframes slide {
+	49% {
+		transform: translateX(100%);
+	}
+	50% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+#about .about-list .list .list-ct{
+	position: relative;
+	width: 90px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#about .about-list .list .list-ct p{
+	color: #fff;
+	font-size: 14px;
+	padding: 5px 0;
+}
+#about .about-list .list .list-ct p:first-child::after{
+	position: absolute;
+	bottom: 24px;
+	display: block;
+	content: "";
+	height: 2px;
+	width: 80px;
+	background-color: #ccc;
+	transform: rotate(-30deg);
+}
+#about .about-list .list .list-ct p:first-child{
+	text-align: left;
+}
+#about .about-list .list .list-ct p:last-child{
+	text-align: right;
+}
+
+#about .about-info{
+	position: relative;
+	width: 0;
+	height: 160px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#about .about-info p{
+	position: relative;
+	top: 200px;
+	line-height: 40px;
+	font-size: 13px;
+}
+#about .about-info::before,.about-info::after{
+	position: absolute;
+	content: "";
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+#about .about-info::before{
+	top: 0;
+	left: 0;
+	border-top: 2px solid #5686D6;
+	border-left: 2px solid #5686D6;
+}
+#about .about-info::after{
+	right: 0;
+	bottom: 0;
+	border-bottom: 2px solid #5686D6;
+	border-right: 2px solid #5686D6;
+}

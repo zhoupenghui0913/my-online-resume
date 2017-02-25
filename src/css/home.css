@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Phelps Chou
+ * @date    2017-02-24 21:30:59
+ * @version $Id$
+ */
+
+
+/*首页样式*/
+#home .content-wrap{
+	display: none;
+	height: 422px;
+}
+@keyframes bg-show {  /*定义页面加载时首页内容展现的动画*/
+	0%{
+		background-size: 130% 130%;	
+	}
+	100%{
+		background-size: 100% 100%;
+	}
+}
+.home-bg-show{
+	animation: bg-show 2s ease-in-out;
+}
+
+#home .home-img{
+	position: relative;
+	padding-top: 66px;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 300px;
+	transition: margin-top 2s ease-in-out;
+}
+#home .home-img img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 150px;
+	height: 150px;
+	border: 2px solid #ccc;
+	border-radius: 75px;
+	transition: box-shadow 2s;
+	cursor: pointer;
+}
+#home .home-img img:hover{
+	box-shadow: 0 0 10px #f00;
+}
+#home h2.home-title{
+	display: none;
+	margin: 20px auto;
+	font-size: 16px;
+}
+#home .home-info{
+	width: 0;
+	margin: 0 auto;
+	border-top: 2px solid #ccc;
+}
+#home p{
+	display: none;
+	margin: 17px 0;
+	font-size: 13px;
+}
+#home .home-img .img2{
+	opacity: 0;
+	z-index: 1;
+}

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Phelps Chou
+ * @date    2017-02-24 21:35:02
+ * @version $Id$
+ */
+
+
+/*我的经历样式*/
+#experience .experience-info{
+	width: 800px;
+	margin: 0 auto;
+	line-height: 30px;
+	font-size: 13px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	visibility: hidden;
+}
+#experience .experience-carousel{
+	visibility: hidden;
+}
+@keyframes slow-show {
+	0%{
+		transform: translateY(20px);	
+		opacity: 0.1;
+	}	
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.slow-show {
+	animation: slow-show 2s;
+	visibility: visible !important;
+}
+
+/***轮播样式部分***/
+/*设置窗口*/
+.experience-carousel{
+	position: relative;
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*设置面板*/
+.experience-carousel .img-ct{
+	position: absolute;
+}
+.experience-carousel .img-ct::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.experience-carousel .img-ct li{
+	position: relative;
+	float: left;
+	width: 900px;
+	height: 300px;
+}
+/*设置内容*/
+.experience-carousel .img-ct li dl{
+	position: absolute;
+	left: 30%;
+	top: 50%;
+	width: 300px;
+	transform: translate(-50%, -50%);
+	text-align: left;
+}
+.experience-carousel .img-ct li dl dt{
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.experience-carousel .img-ct li dl p{
+	color: #333;
+}
+.experience-carousel .img-ct li dl dd{
+	position: relative;
+	font-size: 14px;
+	line-height: 24px;
+}
+.experience-carousel .img-ct li dl dd::before{
+	position: absolute;
+	left: -15px;
+	top: 13px;
+	content: "";
+	width: 4px;
+	height: 4px;
+	background: #000;
+	border-radius: 50%;
+}
+.experience-carousel .img-ct li dl dd a{
+	border-bottom: 1px dashed #666;
+	color: #333;
+}
+.experience-carousel .img-ct li dl dd a:hover{
+	color: #f00;
+	border-color: #f00;
+}
+/*翻页箭头*/
+.experience-carousel .arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #000;
+	border-radius: 28px;
+	line-height: 51px;
+	color: #000;
+	font-size: 45px;
+	opacity: 0.1;
+}
+/*.experience-carousel:hover .arrow{
+	opacity: 1;
+}*/
+.experience-carousel .pre{
+	left: 10px;
+}
+.experience-carousel .next{
+	right: 10px;
+}
+/*轮播切换标记*/
+.bullet{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.bullet li{
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 5px;
+}
+.bullet li.active{
+	background-color: #f00;
+}
